@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-springboot": {
+    "angular-springboot-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-springboot",
+            "outputPath": "dist/angular-springboot-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,12 +37,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -62,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-springboot:build:production"
+              "buildTarget": "angular-springboot-app:build:production"
             },
             "development": {
-              "buildTarget": "angular-springboot:build:development"
+              "buildTarget": "angular-springboot-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-springboot:build"
+            "buildTarget": "angular-springboot-app:build"
           }
         },
         "test": {
@@ -92,9 +97,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
-
+                "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
         }
@@ -102,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "22879d07-3cd0-4cd8-977d-40990d6937aa"
+    "analytics": "5dca3ecd-f5fc-4c28-956f-776f80d57f5f"
   }
 }

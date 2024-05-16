@@ -1,1 +1,16 @@
 <h1 class="text-center"> {{title}}</h1>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6e6fcb">
+    <a class="navbar-brand" routerLink="">Angular App</a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLinkActive="active" routerLink="employee">Employee List</a>
+            <a class="nav-item nav-link" routerLinkActive="active" routerLink="create-employee">Create Employee</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+<!-- <app-employee-list></app-employee-list></div> -->
+<!-- <app-employee-create></app-employee-create>
+<app-employee-update></app-employee-update> -->
+<router-outlet></router-outlet> 

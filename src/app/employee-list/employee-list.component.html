@@ -1,1 +1,32 @@
-<p>employee-list works!</p>
+<h2>Employee details</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>Emp-Id</th>
+    <th>Employee Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Address</th>
+    <th>Mobile Number</th>
+    <th>Email</th>
+    <th>Department</th>
+</tr>
+
+</thead>
+<tbody>
+<tr *ngFor="let employee of employees">
+<td>{{employee.id}}</td>
+<td>{{employee.name}}</td>
+<td>{{employee.age}}</td>
+<td>{{employee.salary}}</td>
+<td>{{employee.address}}</td>
+<td>{{employee.phone}}</td>
+<td>{{employee.email}}</td>
+<td>{{employee.department}}</td>
+<td>
+    <button (click) = "updateemployee(employee.id)" class="btn btn-info">Update</button>
+    <button (click) = "deleteUser(employee.id)" class="btn btn-danger">Delete</button>
+</td>
+</tr>
+</tbody>
+</table>

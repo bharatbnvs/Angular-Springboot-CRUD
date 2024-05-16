@@ -1,12 +1,17 @@
 export class Employee {
-    id: any;
-    name: any;
+    id: number;
+    name: String;
   
-     age:any;
-     salary:any;
-     address:any;
-     phone:any;
-     email:any
-     department:any;
+     age:number;
+     salary:number;
+     address:String;
+     phone:String;
+     email:String
+     department:String;
 
-}
+
+
+      
+    }
+     
+    
