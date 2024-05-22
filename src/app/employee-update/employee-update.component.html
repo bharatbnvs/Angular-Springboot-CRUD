@@ -1,36 +1,37 @@
-<p>employee-update works!</p>
+<h2 class="text-center">Employee-Update !</h2>
 <div class="container">
-    <h2 class="text-center">Update User</h2>
-    <form (ngSubmit) = "onSubmit()">
-        <div class="form-group">
-            <label for="Name"> Name</label>
+    <div class="col-md-4 mb-3">
+    <form (ngSubmit) = "onSubmit()" >
+        <div class="form-group" >
+            <label for="Name"><b>Name</b> </label>
             <input type="text" class="form-control" id="name" [(ngModel)]="employee.name" name="name">
         </div>
         <div class="form-group">
-            <label for="Age"> Age</label>
+            <label for="Age"><b>Age</b> </label>
             <input type="text" class="form-control" id="age" [(ngModel)]="employee.age" name="age">
         </div>
         <div class="form-group">
-            <label for="salary">Salary</label>
+            <label for="salary"><b>Salary</b></label>
             <input type="text" class="form-control" id="salary" [(ngModel)]="employee.salary" name="Salary">
         </div>
         <div class="form-group">
-            <label for="address">Address</label>
+            <label for="address"><b>Address</b></label>
             <input type="text" class="form-control" id="address" [(ngModel)]="employee.address" name="address">
         </div>
         <div class="form-group">
-            <label for="mobile">Mobile No.</label>
+            <label for="mobile"><b>Contact</b>.</label>
             <input type="text" class="form-control" id="mobile" [(ngModel)]="employee.phone" name="Mobile">
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email"><b>Email</b></label>
             <input type="email" class="form-control" id="Email" [(ngModel)]="employee.email" name="Email">
         </div>
         <div class="form-group">
-            <label for="dept">Department</label>
+            <label for="dept"><b>Department</b></label>
             <input type="text" class="form-control" id="department" [(ngModel)]="employee.department" name="Department">
         </div>
 
         <button class="btn btn-success mt-2" type="submit">Update</button>
      </form>
+     </div>
 </div>

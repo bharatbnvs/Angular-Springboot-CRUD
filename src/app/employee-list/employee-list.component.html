@@ -3,13 +3,14 @@
 <thead>
 <tr>
     <th>Emp-Id</th>
-    <th>Employee Name</th>
+    <th>Full Name</th>
     <th>Age</th>
     <th>Salary</th>
     <th>Address</th>
-    <th>Mobile Number</th>
+    <th>Contact</th>
     <th>Email</th>
     <th>Department</th>
+    <th>Action</th>
 </tr>
 
 </thead>
@@ -26,6 +27,9 @@
 <td>
     <button (click) = "updateemployee(employee.id)" class="btn btn-info">Update</button>
     <button (click) = "deleteUser(employee.id)" class="btn btn-danger">Delete</button>
+    <button (click) = "findEmployee(employee.id)" class="btn btn-info">Details</button>
+
+
 </td>
 </tr>
 </tbody>

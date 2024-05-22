@@ -19,11 +19,11 @@ employee:Employee;
 
   private getByEmployeeId(){
     this.id=this.route.snapshot.params['id'];
-    this.employeeService.getEmployeeById(this.id).subscribe({
-    next:(data)=>{
+    this.employeeService.getEmployeeById(this.id).subscribe(
+    data=>{
      this.employee=data;
         }
-    });
+    );
 
   }
   private updateEmployee() {
